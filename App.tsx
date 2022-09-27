@@ -1,7 +1,12 @@
 import React from "react";
+import { StatusBar } from "expo-status-bar";
 import AppLoading from "expo-app-loading";
 import { View, Text } from "react-native";
 import { ThemeProvider } from "styled-components/native";
+
+import COLORS from "./src/styles/theme";
+
+import { Login } from "./src/screens/Login/Login";
 
 import {
   useFonts,
@@ -14,9 +19,8 @@ import {
 
 import { DMSans_400Regular } from '@expo-google-fonts/dm-sans';
 import { DMSerifDisplay_400Regular } from '@expo-google-fonts/dm-serif-display';
-import { Colors } from "react-native/Libraries/NewAppScreen";
 
-import COLORS from "./src/styles/theme";
+
 
 
 const App: React.FC = () => {
@@ -36,9 +40,16 @@ const App: React.FC = () => {
 
   return (
     <ThemeProvider theme={COLORS}>
+      <StatusBar
+        style="dark"
+        translucent
+        backgroundColor="transparent"
+      />
+
       <View>
-        <Text>Wallet</Text>
+        <Login />
       </View>
+
   </ThemeProvider>
   )
 }
