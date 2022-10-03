@@ -27,8 +27,7 @@ const Login: React.FC = () => {
               <Description>Entrar com Redes Sociais</Description>
 
               <ViewButton>
-
-                <ButtonSocialGoogle />
+                <ButtonSocialGoogle title="Google" />
 
               </ViewButton>
 
