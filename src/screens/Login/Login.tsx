@@ -1,6 +1,7 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native'
 
+import {Input} from '../../components/Input/Input';
 import { ButtonSocialGoogle } from '../../components/ButtonSocialGoogle/ButtonSocialGoogle';
 import { ButtonSocialFacebook } from '../../components/ButtonSocialFacebook/ButtonSocialFacebook';
 import {
@@ -29,12 +30,14 @@ const Login: React.FC = () => {
 
               <ViewButton>
                 <ButtonSocialGoogle title="Google" />
-                <ButtonSocialFacebook title="Facebook"/>
+                <ButtonSocialFacebook iconName= "facebook" title="Facebook"/>
               </ViewButton>
 
           </ContentHeader>
 
           <ContentBody>
+
+            <Input />
 
           </ContentBody>
 
