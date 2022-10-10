@@ -37,7 +37,9 @@ const Login: React.FC = () => {
 
           <ContentBody>
 
-            <Input />
+            <Input
+              name="email"
+            />
 
           </ContentBody>
 

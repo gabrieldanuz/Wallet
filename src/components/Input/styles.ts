@@ -15,7 +15,7 @@ interface ITextContainerProps extends ViewProps {
 }
 
 export const Container = styled.View`
-  width: 85px;
+  width: ${RFValue(250)}px;
   height: ${RFValue(50)}px;
   flex-direction: row;
   margin-bottom: ${RFValue(10)}px;
