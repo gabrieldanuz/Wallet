@@ -39,6 +39,7 @@ const Login: React.FC = () => {
 
             <Input
               name="email"
+              iconName='home'
             />
 
           </ContentBody>
