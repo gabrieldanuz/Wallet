@@ -1,13 +1,38 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { useTheme } from 'styled-components';
 
-import { Container } from './styles';
+import { Container, InputContainer } from './styles';
 
-const Input = () => {
+interface InputProps {
+  RightIcon?: boolean;
+  LeftIcon?: boolean;
+}
+
+const Input: React.FC<InputProps> = ({RightIcon, LeftIcon}) => {
+  const {COLORS} = useTheme();
+
 
   return (
     <Container>
-      <Text>Input</Text>
+      {LeftIcon && (
+      <Ionicons
+          name='mail-outline'
+          size={20}
+          color={COLORS.TEXTDARK}
+          style={{padding: 5, marginLeft: 10}}
+      />
+      )}
+      <InputContainer />
+        {RightIcon && (
+                <Ionicons
+                name='mail-outline'
+                size={20}
+                color={COLORS.TEXTDARK}
+                style={{padding: 5, marginRight: 10}}
+              />
+        )}
+
     </Container>
   )
 

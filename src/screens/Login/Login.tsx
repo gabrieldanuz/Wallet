@@ -1,6 +1,7 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native'
 
+import Input from '../../components/Input/';
 import { ButtonSocialGoogle } from '../../components/ButtonSocialGoogle/ButtonSocialGoogle';
 import { ButtonSocialFacebook } from '../../components/ButtonSocialFacebook/ButtonSocialFacebook';
 import {
@@ -35,6 +36,9 @@ const Login: React.FC = () => {
           </ContentHeader>
 
           <ContentBody>
+
+            <Input LeftIcon RightIcon/>
+            <Input />
 
           </ContentBody>
 
