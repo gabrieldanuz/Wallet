@@ -1,5 +1,7 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native'
+import { useTheme } from 'styled-components';
+
 
 import Input from '../../components/Input/';
 import { ButtonSocialGoogle } from '../../components/ButtonSocialGoogle/ButtonSocialGoogle';
@@ -15,6 +17,8 @@ import {
 } from './styles';
 
 const Login: React.FC = () => {
+ const {COLORS} = useTheme();
+
   return (
 
     <SafeAreaView>
@@ -37,8 +41,19 @@ const Login: React.FC = () => {
 
           <ContentBody>
 
-            <Input LeftIcon RightIcon/>
-            <Input />
+            <Input
+                   LeftIcon
+                   iconSize= {25}
+                   iconName= "mail-outline"
+                   placeholder="Digite seu e-mail"
+                   />
+
+            <Input
+                   LeftIcon
+                   iconSize={25}
+                   iconName= 'lock-closed-outline'
+                   placeholder="Digite sua senha"
+                   />
 
           </ContentBody>
 

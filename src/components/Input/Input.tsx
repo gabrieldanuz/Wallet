@@ -1,15 +1,19 @@
 import React from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from 'styled-components';
+import {TextInputProps} from 'react-native';
 
 import { Container, InputContainer } from './styles';
 
 interface InputProps {
   RightIcon?: boolean;
   LeftIcon?: boolean;
+  iconName: string;
+  iconSize?: number;
+  iconColor?: string;
 }
 
-const Input: React.FC<InputProps> = ({RightIcon, LeftIcon}) => {
+const Input: React.FC<InputProps & TextInputProps> = ({RightIcon, LeftIcon, iconName, iconSize, iconColor, ...rest}) => {
   const {COLORS} = useTheme();
 
 
@@ -17,19 +21,22 @@ const Input: React.FC<InputProps> = ({RightIcon, LeftIcon}) => {
     <Container>
       {LeftIcon && (
       <Ionicons
-          name='mail-outline'
-          size={20}
-          color={COLORS.TEXTDARK}
-          style={{padding: 5, marginLeft: 10}}
+          name= {iconName}
+          size= {iconSize}
+          color= {iconColor|| COLORS.TEXTDARK}
+          style= {{padding: 5}}
       />
       )}
-      <InputContainer />
+      <InputContainer
+        {...rest}
+        placeholderTextColor={COLORS.GRAY3}
+      />
         {RightIcon && (
                 <Ionicons
-                name='mail-outline'
-                size={20}
-                color={COLORS.TEXTDARK}
-                style={{padding: 5, marginRight: 10}}
+                name= {iconName}
+                size= {iconSize}
+                color= {iconColor || COLORS.TEXTDARK}
+                style={{padding: 5}}
               />
         )}
 
