@@ -4,6 +4,7 @@ import { useTheme } from 'styled-components';
 
 
 import Input from '../../components/Input/';
+import {Button} from '../../components/Button/Button';
 import { ButtonSocialGoogle } from '../../components/ButtonSocialGoogle/ButtonSocialGoogle';
 import { ButtonSocialFacebook } from '../../components/ButtonSocialFacebook/ButtonSocialFacebook';
 import {
@@ -54,6 +55,12 @@ const Login: React.FC = () => {
                    iconName= 'lock-closed-outline'
                    placeholder="Digite sua senha"
                    />
+
+                   <Button
+                      title="Entrar"
+                      onPress={() => {}}
+
+                      />
 
           </ContentBody>
 
