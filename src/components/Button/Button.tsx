@@ -8,7 +8,7 @@ interface IButtonProps {
   onPress: () => void;
 }
 
-export const Button = ({title, onPress = () => {}} : IButtonProps) => {
+export const Button: React.FC<IButtonProps> = ({title, onPress = () => {}} ) => {
   return (
     <Container onPress={onPress}>
       <Title>{title}</Title>

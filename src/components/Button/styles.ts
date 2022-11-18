@@ -9,12 +9,12 @@ export const Container = styled.Pressable`
   justify-content: center;
   margin-top: ${RFValue(15)}px;
   border-radius: ${RFValue(8)}px;
-  background-color: ${({ theme }) => theme.COLORS.PURPLE};
+  background-color: ${({ theme }) => theme.COLORS.PRIMARY};
 `;
 
 export const Title = styled.Text`
   font-size: ${RFValue(18)}px;
   font-family: ${({ theme }) => theme.FONTS.POPPINSREGULAR};
-  color: ${({ theme }) => theme.COLORS.WHITE_100};
+  color: ${({ theme }) => theme.COLORS.BACKGROUNDDARK};
 
 `;
