@@ -19,7 +19,7 @@ interface ButtonStyle {
 
 export interface ButtonVariant {
   enabled: ButtonStyle;
-  disable: ButtonStyle
+  disabled: ButtonStyle
 };
 
 const buttonPrimary: ButtonVariant = {
@@ -34,9 +34,9 @@ const buttonPrimary: ButtonVariant = {
       color: COLORS.WHITE,
     },
   },
-  disable: {
+  disabled: {
     button: {
-      backgroundColor: COLORS.PRIMARY,
+      backgroundColor: COLORS.GRAY_100,
     },
     title: {
       color: COLORS.WHITE,
@@ -45,4 +45,66 @@ const buttonPrimary: ButtonVariant = {
       color: COLORS.WHITE,
     },
   },
+}
+
+const buttonOutline: ButtonVariant = {
+  enabled: {
+    button: {
+      backgroundColor: 'transparent',
+      borderWidth: 2,
+      borderColor: COLORS.PRIMARY,
+    },
+    title: {
+      color: COLORS.GRAY1,
+    },
+    icon: {
+      color: COLORS.GRAY1,
+    },
+
+  },
+  disabled: {
+    button: {
+      backgroundColor: 'transparent',
+      borderWidth: 2,
+      borderColor: COLORS.PRIMARY,
+    },
+    title: {
+      color: COLORS.GRAY_100,
+    },
+    icon: {
+      color: COLORS.GRAY_100,
+    },
+  },
+}
+
+const buttonBlack: ButtonVariant = {
+  enabled: {
+    button: {
+      backgroundColor: COLORS.BLACK,
+    },
+    title: {
+      color: COLORS.ORANGE_300,
+    },
+    icon: {
+      color: COLORS.ORANGE_300,
+    },
+
+  },
+  disabled: {
+    button: {
+      backgroundColor: COLORS.GRAY_100,
+    },
+    title: {
+      color: COLORS.WHITE,
+    },
+    icon: {
+      color: COLORS.WHITE,
+    },
+  },
+}
+
+export const variants = {
+  primary: buttonPrimary,
+  outline: buttonOutline,
+  black: buttonBlack
 }
